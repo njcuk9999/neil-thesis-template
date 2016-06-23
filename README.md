@@ -10,13 +10,13 @@ The manual can be viewed in pdf format by opening main.pdf or compiling main.tex
   * [2.1 The compiler](#21-the-compiler)
   * [2.2 Modifying your TeX path](#22-modifying-your-tex-path)
 * [3 Some useful information](#3-some-useful-information)
-  * [3.1 Using table commands](#31-using-table-commmands)
-    * [3.1.1 The Input table command](#3.1.1-the-input-table-command)
+  * [3.1 Using table commands](#31-using-table-commands)
+    * [3.1.1 The Input table command](#311-the-input-table-command)
     * [3.1.2 Landscape table](#312-landscape-table)
   * [3.2 Cartoon footnotes (for supervisors that get bored quickly)](#32-cartoon-footnotes-for-supervisors-that-get-bored-quickly)
   * [3.3 Indexing](#33-indexing)
   * [3.4 Using the glossary](#34-using-the-glossary)
-  * [3.5 Using acknowledgement citations](#35-using-acknowledgement)
+  * [3.5 Using acknowledgement citations](#35-using-acknowledgement-citations)
   * [3.6 Referencing figures, tables and sections](#36-referencing-figures-tables-and-sections)
 
 ## 1  Credit for this template
