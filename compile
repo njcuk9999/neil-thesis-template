@@ -1,0 +1,104 @@
+#!/bin/sh
+
+### ============================================================================
+### --->  You will need to change this stuff to compile the document  <--- ###
+### ============================================================================
+
+### --->  Commands  <--- ###
+LATEX=/usr/bin/pdflatex
+BIBTEX=/usr/bin/bibtex
+OPEN="/usr/bin/okular --unique "
+### --->  Users Files  <--- ###
+rootDoc=./
+rootPath=main
+
+### ============================================================================
+### --->  _Don't_ change anything past here  <--- ###
+### ============================================================================
+CWD=pwd
+MKGLOS=./latex_resources/glossary/makeglos.pl
+MKINDX=./latex_resources/makeindex
+
+cd $rootDoc
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Compiling Latex..."
+echo "-------------------------------------------------------------------"
+echo " "
+$LATEX "$rootPath"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Compiling Bibtex..."
+echo "-------------------------------------------------------------------"
+echo " "
+$BIBTEX "$rootPath"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Making Glossary..."
+echo "-------------------------------------------------------------------"
+echo " "
+$MKGLOS "$rootPath"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Making Index..."
+echo "-------------------------------------------------------------------"
+echo " "
+$MKINDX "$rootPath"".idx"
+$MKINDX -s "$rootPath"".ist" -t "$rootPath"".glg" "$rootPath"".glo" -o "$rootPath"".gls"
+$MKINDX -s "$rootPath"".ist" -t "$rootPath"".nlg" "$rootPath"".not" -o "$rootPath"".ntn"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Compiling Latex.."
+echo "-------------------------------------------------------------------"
+echo " "
+$LATEX "$rootPath"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Compiling Latex.."
+echo "-------------------------------------------------------------------"
+echo " "
+$LATEX "$rootPath"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Making Index..."
+echo "-------------------------------------------------------------------"
+echo " "
+$MKINDX "$rootPath"".idx"
+$MKINDX -s "$rootPath"".ist" -t "$rootPath"".glg" "$rootPath"".glo" -o "$rootPath"".gls"
+$MKINDX -s "$rootPath"".ist" -t "$rootPath"".nlg" "$rootPath"".not" -o "$rootPath"".ntn"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Compiling Latex.."
+echo "-------------------------------------------------------------------"
+echo " "
+$LATEX "$rootPath"
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Clearing temp files to " "$rootDoc""trash/"
+echo "-------------------------------------------------------------------"
+echo " "
+bits=(.aux .equ .glo .idx .ist .lof .lot .not .out .toc .bbl .blg .glg .gls .ilg .ind .nlg .ntn .log) 
+for file in ${bits[@]}; do
+	echo "    clearing" $file
+	find $rootDoc -name \*$file -type f -not -path "./trash/*" -exec mv {} ./trash/ \;
+done
+
+echo " "
+echo "-------------------------------------------------------------------"
+echo " Opening file..."
+echo "-------------------------------------------------------------------"
+echo " "
+$OPEN "$rootPath"".pdf" &
+
+cd $PWD
+echo " "
+echo " Done"
