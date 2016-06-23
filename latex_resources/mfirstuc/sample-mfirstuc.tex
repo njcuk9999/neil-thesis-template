@@ -1,0 +1,55 @@
+ % This file is public domain
+ % If you want to use arara, you need the following directive:
+ % arara: pdflatex: { synctex: on }
+\documentclass{article}
+
+\usepackage{mfirstuc-english}
+
+\begin{document}
+
+\makefirstuc{abc}.
+
+\makefirstuc{{\em abc}}.
+
+\makefirstuc{\emph{abc}}.
+
+\makefirstuc{\ae bc}.
+
+\makefirstuc{{\ae}bc}.
+
+\newcommand{\abc}{abc}%
+\xmakefirstuc{\abc}.
+
+\newcommand*{\mytext}{\protect\textbf{some text}}
+Protected formatting: \xmakefirstuc{\mytext}.
+
+\renewcommand*{\mytext}{\ae\oe{some text}}
+Sequential commands: \xmakefirstuc{\mytext}.
+
+\capitalisewords{the wind in the willows}
+
+\capitalisewords{a book of rhyme.}
+
+\MFUclear
+
+\capitalisewords{the wind in the willows}
+
+\capitalisewords{a book of rhyme.}
+
+\capitalisewords{a book\space of rhyme.}
+
+\newcommand{\mytitle}{a book\space of rhyme.}
+\capitalisewords{\mytitle}
+
+\xcapitalisewords{\mytitle}
+
+Formatting for the entire phrase must go outside
+\verb|\capitalisewords| (unlike \verb|\makefirstuc|). Compare:
+
+\capitalisewords{\textbf{a book of rhyme.}}
+
+with:
+
+\textbf{\capitalisewords{a book of rhyme.}}
+
+\end{document}
