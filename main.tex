@@ -1,0 +1,371 @@
+%--------------------------------------------------------------------------%
+%                                                                          %
+%               PREAMBLE                                                   %
+%                                                                          %
+%--------------------------------------------------------------------------%
+\documentclass[useAMS,a4paper,12pt,twoside]{phd}
+%--------------------------------------------------------------------------%
+% Layout and Template Packages
+\usepackage[number=none]{glossary} % Create glossaries and lists of acronyms
+%\usepackage{comment}               % Selectively include/excludes portions of text
+\usepackage{tocloft}               % Control table of contents, figures, etc
+\usepackage{setspace}              % Set space between lines
+\usepackage{fancyhdr}              % Extensive control of page headers and footers in LaTeX2ε
+\usepackage{makeidx}               % Standard LaTeX package for creating indexes
+\usepackage{mfirstuc}              % Uppercase the first letter of a word
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}    %Driver-independent color extensions
+\usepackage{pgfkeys}
+%--------------------------------------------------------------------------%
+% Chapter Packages
+\usepackage{graphicx}              % Enhanced support for graphics
+\usepackage{amsmath}               % Amer­i­can Math­e­mat­i­cal So­ci­ety mathematical 
+\usepackage{amssymb}               % TeX fonts from the Amer­i­can Math­e­mat­i­cal
+\usepackage{gensymb}               % Generic symbols for both text and maths mode
+\usepackage{textcomp}              % LaTeX support for the Text Companion fonts
+\usepackage[linktocpage=true]{hyperref}            % Extensive support for hypertext in LaTeX
+\usepackage{natbib}                % Flexible bibliography support
+\usepackage{multirow}              % Create tabular cells spanning multiple rows
+\usepackage{enumitem}              % Control layout of itemize, enumerate, description
+\usepackage[pass]{geometry}        % Flex­i­ble and com­plete in­ter­face to doc­u­ment di­men­sions
+\usepackage{pdflscape}             % Make land­scape pages dis­play as land­scape
+\usepackage{longtable}             % Al­low ta­bles to flow over page bound­aries
+\usepackage{caption}               % Allows custom captions (used in continued tables)
+\usepackage{listings}              % Only used for this template to display code, can delete
+
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Set up for the hyperlinks                                      %
+%                                                                          %
+%--------------------------------------------------------------------------%
+\hypersetup{
+    pdfauthor={Name Here},
+    pdfcreator={Name Here},
+    pdftitle={Ph.D. Thesis: Thesis title here},
+    pdfsubject={Subject of thesis here},
+    pdfkeywords={thesis keywords here},
+    colorlinks=true,         % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=Maroon,        % color of links to bibliography
+    filecolor=blue,          % color of file links
+    urlcolor=blue,           % color of external links
+    plainpages=false,       
+}
+
+% This is only used if you want to add code
+\lstdefinestyle{base}{
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{Tan},
+  language=[LaTeX]{TeX},
+  moredelim=**[is][\color{red}]{@}{@},
+}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Add Watermark                                                  %
+%                                                                          %
+%--------------------------------------------------------------------------%
+%\usepackage{graphicx,type1cm,eso-pic,color}
+%
+%\makeatletter
+%          \AddToShipoutPicture{
+%            \setlength{\@tempdimb}{.5\paperwidth}
+%            \setlength{\@tempdimc}{.5\paperheight}
+%            \setlength{\unitlength}{1pt}
+%            \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){
+%        \makebox(0,0){\rotatebox{55}{\textcolor[gray]{0.85}
+%        {\fontsize{5cm}{5cm}\selectfont{DRAFT}}}}
+%            }
+%        }
+%\makeatother
+
+
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Page set up                                                    %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% Basically sets the margins header and footer sizes
+\setlength{\topmargin}{-1.8cm}
+\setlength{\marginparwidth}{-1cm}
+\setlength{\marginparsep}{-1cm}
+\setlength{\oddsidemargin}{0.8cm}
+\setlength{\evensidemargin}{-0.3cm}
+\setlength{\textheight}{25.0cm}
+\setlength{\footskip}{0.8cm}
+\setlength{\textwidth}{15.5cm}
+\setlength{\headheight}{1cm}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Make Glossary                                                  %
+%                                                                          %
+%--------------------------------------------------------------------------%
+%
+%   must run:
+%       .../glossary/makeglos.pl "$rootPath"
+%
+%   to compile glossary
+%   \useglosentry{key}
+\makeglossary
+\newglossarytype[nlg]{notation}{not}{ntn}
+\newcommand{\notationname}{List of Symbols}
+\makenotation
+% Add glossary commands at this point
+\input{./preamble/glossary}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Make index                                                     %
+%                                                                          %
+%--------------------------------------------------------------------------%
+%
+%   must run:
+%       makeindex "$rootPath"".idx"
+%       makeindex -s "$rootPath"".ist" -t "$rootPath"".glg" "$rootPath"".glo" -o "$rootPath"".gls"
+%       makeindex -s "$rootPath"".ist" -t "$rootPath"".nlg" "$rootPath"".not" -o 
+%   to compile index
+%   use \index{key} to put a word into the index   
+\makeindex
+\linespread{1.6}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           New Command List                                               %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% command definitions in here
+% List of new commands
+% I suggest all new commands added are placed in here or in similar files
+% added here
+\input{./preamble/newcommands}
+
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           List of Equations                                              %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% This compiles a list of equations
+% Use is as follows:
+%
+%   \begin{equation}
+%       INSERT EQUATION HERE
+%   \end{equation}
+%   \myequations{EQUATION DEFINITION HERE}
+%
+% This will add the equation definition to the list
+% 
+\newcommand{\listofeqs}{List of Equations}
+\newlistof{myequations}{equ}{\listofeqs}
+\setlength{\cftmyequationsnumwidth}{2.5em} % sets the distance between eq_num and text
+\newcommand{\myequations}[1]{%
+\refstepcounter{myequations}
+\addcontentsline{equ}{myequations}
+{\protect\numberline{\theequation}#1}\par}
+
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Start Document                                                 %
+%                                                                          %
+%--------------------------------------------------------------------------%
+\begin{document}
+%Page numbering in roman numerials
+\pagenumbering{roman}
+% Add the word 'Page' above contents numbers
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+
+%Add title page
+\include{./preamble/titlepage}
+
+%Add custom acknowledgements comments (see acknowledgement_refs.tex)
+\input{./preamble/acknowledgement_refs}
+
+\newpage
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Preamble sections                                              %
+%                                                                          %
+%--------------------------------------------------------------------------%
+%set spacing for preamble sections
+\singlespacing
+%\doublespacing
+
+%--------------------------------------------------------------------------
+% Makes Acknowledgements page
+\phantomsection \label{acknowledgements}
+\include{./preamble/Acknowledgements}      
+\newpage
+
+%--------------------------------------------------------------------------
+% Makes Abstract Page
+\phantomsection \label{abstract}
+\include{./preamble/Abstract}
+\newpage
+
+%--------------------------------------------------------------------------
+% Make list of Sections (for contents page)
+\phantomsection \label{listofcontents}
+\addcontentsline{toc}{section}{Table of Contents}\tableofcontents
+\newpage
+
+%--------------------------------------------------------------------------
+% Make list of figures
+%   can use \caption[short caption]{long caption} to provide a shorter caption for list
+\phantomsection \label{listoffig}
+\addcontentsline{toc}{section}{List of Figures}\listoffigures
+\newpage            
+
+%--------------------------------------------------------------------------
+% Make list of Tables
+%   can use \caption[short caption]{long caption} to provide a shorter caption for list
+\phantomsection \label{listoftab}
+\addcontentsline{toc}{section}{List of Tables}\listoftables
+\newpage
+
+%--------------------------------------------------------------------------
+% Make list of equations
+%   note must place \myequations{} after equation in text
+\phantomsection \label{listofeqs}
+\addcontentsline{toc}{section}{List of Equations}\listofmyequations
+\newpage            
+
+%--------------------------------------------------------------------------
+% Make list of symbols
+%   see ./preamble/symbols.tex
+\phantomsection \label{listofsyms}
+\input{./preamble/symbols}
+\addcontentsline{toc}{section}{List of Symbols}\printnotation
+\newpage            
+
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Fancy Header Section                                           %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% This section adds the Chapter heading and Section heading (with ruler etc)
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+        \fancyhead{}
+        \renewcommand{\headrulewidth}{0pt}
+}
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Draft copy with PhD comics as page footers                     %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% This section was a custom request from one of my supervisors
+% it should probably only be added in to draft copies
+% Basically it puts an image (i.e. a cartoon in my case) at the bottom of 
+% each page (images located in the ./footers folder)
+% The images MUST be named 1.jpg 2.jpg 3.jpg 
+% (though you could modify this below)
+% 
+% To add image footers uncomment the following two lines of code:
+%
+\fancyfoot[C]{\includegraphics[height=4cm]{./footers/\arabic{page}.jpg}}
+\setlength{\textheight}{22.5cm}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%   Leave a blank double page before the start of the work                 %
+%                                                                          %
+%--------------------------------------------------------------------------%
+\newpage                %These 4 commands leave a blank page
+\mbox{}
+\thispagestyle{empty}           %removes page number
+\newpage
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%           Reset Counter                                                  %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% changes the page numbering from roman (i, ii, iii...) to arabic (1, 2, 3...)
+% for the remainder of the thesis
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%               Chapters                                                   %
+%                                                                          %
+%--------------------------------------------------------------------------%
+% Set the line spacing for the chapters
+% I find that doublespacing is too much so I use a true one and a half
+% linespacing (equivalent to 1.5 in word if you use \linespread{1.25})
+%
+%\doublespacing
+%\singlespacing
+\linespread{1.25}
+
+% Add chapters here
+\include{./chapters/ch_1}
+\include{./chapters/ch_2}
+%\include{./chapters/ch_3}
+%\include{./chapters/ch_4}
+%\include{./chapters/ch_5}
+%\include{./chapters/ch_6}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%       The Bibliography, Glossary, Appendices and Index                   %
+%                                                                          %
+%--------------------------------------------------------------------------%
+
+% Add references section
+\newpage
+\singlespacing
+\phantomsection \label{references}
+\addcontentsline{toc}{chapter}{References}
+% set bib style
+\bibliographystyle{./referencing/astroads}
+% import bib file
+\bibliography{./referencing/Bibliography.bib}
+
+%--------------------------------------------------------------------------
+% Add Glossary section
+\newpage
+\singlespacing
+\phantomsection \label{listofglos}
+\addcontentsline{toc}{chapter}{Glossary}
+\printglossary
+
+%--------------------------------------------------------------------------
+% Add Appendix
+\appendix
+\input{./appendices/appendixA}
+%\input{./appendices/appendixB}
+
+%\appendixpage
+%\addappheadtotoc
+
+%--------------------------------------------------------------------------
+% Add Index
+\newpage
+\singlespacing
+\phantomsection \label{listofindex}
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+%--------------------------------------------------------------------------
+% And we are done (now we just need to write the thesis)
+\end{document}
+
+%--------------------------------------------------------------------------%
+%                                                                          %
+%               END                                                        %
+%                                                                          %
+%--------------------------------------------------------------------------%
