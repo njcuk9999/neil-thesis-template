@@ -1,0 +1,33 @@
+\glossaryentry{ad@{\glosslabel{ntn:ad}{$\alpha $,$\delta $}}Right Ascension and declination on the sky, measured in degrees\relax|glsnumformat}{viii}
+\glossaryentry{micron@{\glosslabel{ntn:micron}{\micron }}10$^{-6}$ m\relax|glsnumformat}{viii}
+\glossaryentry{msun@{\glosslabel{ntn:msun}{\Msun }}Solar Mass (1.989 $\times $10$^{30}$ kg)\relax|glsnumformat}{viii}
+\glossaryentry{rsun@{\glosslabel{ntn:rsun}{\Rsun }}Solar Radius (6.963 $\times $10$^{8}$ m)\relax|glsnumformat}{viii}
+\glossaryentry{mjup@{\glosslabel{ntn:mjup}{$M_{jup}$}}Jupiter Mass (1.898 $\times $10$^{27}$ kg)\relax|glsnumformat}{viii}
+\glossaryentry{rjup@{\glosslabel{ntn:rjup}{$R_{jup}$}}Jupiter Radius (6.991 $\times $10$^{7}$ m)\relax|glsnumformat}{viii}
+\glossaryentry{teff@{\glosslabel{ntn:teff}{\Teff }}A objects effective surface temperature in Kelvin, K\relax|glsnumformat}{viii}
+\glossaryentry{logg@{\glosslabel{ntn:logg}{\logg }}A objects surface gravity, where g is measured in cgs units\relax|glsnumformat}{viii}
+\glossaryentry{ebv@{\glosslabel{ntn:ebv}{\EBV }}Colour Excess\relax|glsnumformat}{viii}
+\glossaryentry{av@{\glosslabel{ntn:av}{\Av }}Visual Extinction\relax|glsnumformat}{viii}
+\glossaryentry{alam@{\glosslabel{ntn:alam}{\Alam }}Extinction at wavelength, $\lambda $\relax|glsnumformat}{viii}
+\glossaryentry{pc@{\glosslabel{ntn:pc}{pc}}parsec (3.086 $\times $10$^{16}$ m)\relax|glsnumformat}{viii}
+\glossaryentry{au@{\glosslabel{ntn:au}{AU}}Astronomical Unit (1.496 $\times $10$^{11}$ m)\relax|glsnumformat}{viii}
+\glossaryentry{aa@{\glosslabel{ntn:aa}{\AA }}Angstrom (1.0 $\times $10$^{-10}$ m)\relax|glsnumformat}{viii}
+\glossaryentry{h@{\glosslabel{ntn:h}{$h$}}Planck Constant (6.62606896(33) $\times $10$^{-34}$ m$^{2}$ kg s$^{-1}$)\relax|glsnumformat}{viii}
+\glossaryentry{lam@{\glosslabel{ntn:lam}{$\lambda $}}Wavelength\relax|glsnumformat}{viii}
+\glossaryentry{c@{\glosslabel{ntn:c}{\em c}}Speed of Light (3.0 x 10$^{8}$ m s$^{-1}$)\relax|glsnumformat}{viii}
+\glossaryentry{h0@{\glosslabel{ntn:h0}{$H_0$}}Hubble constant (72 km s$^{-1}$Mpc$^{-1}$)\relax|glsnumformat}{viii}
+\glossaryentry{kb@{\glosslabel{ntn:kb}{$k_B$}}Boltzmann constant (1.3806504(24) $\times $10$^{-23}$ J K$^{-1}$)\relax|glsnumformat}{viii}
+\glossaryentry{mpc@{\glosslabel{ntn:mpc}{Mpc}}10$^6$ pc\relax|glsnumformat}{viii}
+\glossaryentry{myr@{\glosslabel{ntn:myr}{Myr}}10$^6$ yr\relax|glsnumformat}{viii}
+\glossaryentry{gyr@{\glosslabel{ntn:gyr}{Gyr}}10$^9$ yr\relax|glsnumformat}{viii}
+\glossaryentry{sigma@{\glosslabel{ntn:sigma}{$\sigma $}}The uncertainty on a measurement (unless otherwise stated)\relax|glsnumformat}{viii}
+\glossaryentry{beta@{\glosslabel{ntn:beta}{$\beta $}}The binary fraction\relax|glsnumformat}{viii}
+\glossaryentry{Hx@{\glosslabel{ntn:Hx}{$H_X$}}The reduced proper motion using photometric band X (\ie $X=V$, $X=J$)\relax|glsnumformat}{viii}
+\glossaryentry{Mx@{\glosslabel{ntn:Mx}{$M_X$}}The absolute magnitude (apparent magnitude at 10 pc) in photometric band X (\ie $X=V$, $X=J$)\relax|glsnumformat}{viii}
+\glossaryentry{mu@{\glosslabel{ntn:mu}{$\mu $,$\mu _{\alpha }$,$\mu _{\delta }$}}The total proper motion and the proper motion components in $\alpha $ and $\delta $, masured in \arcsec yr$^{-1}$\relax|glsnumformat}{viii}
+\glossaryentry{JHK@{\glosslabel{ntn:JHK}{$J$,$H$,$K_S$}}2MASS photometric bands (centred at 1.25, 1.65 and 2.16\micron )\relax|glsnumformat}{viii}
+\glossaryentry{gri@{\glosslabel{ntn:gri}{$g$,$r$,$i$,$z$}}SDSS photometric bands (centred at 0.46, 0.62, 0.66 and 0.89\micron )\relax|glsnumformat}{viii}
+\glossaryentry{v@{\glosslabel{ntn:v}{$V$}}V band taken from the SDSS transformation\relax|glsnumformat}{viii}
+\glossaryentry{v@{\glosslabel{ntn:v}{$V_J$}}Johnson V magnitude derived from $B_T$ and $V_T$\relax|glsnumformat}{viii}
+\glossaryentry{v@{\glosslabel{ntn:v}{$V_T$, $B_T$}}V band taken from the Tycho-2 catalogue.\relax|glsnumformat}{viii}
+\glossaryentry{w1w2@{\glosslabel{ntn:w1w2}{$W1$,$W2$}}WISE photometric bands (centred at 3.4 and 4.6\micron )\relax|glsnumformat}{viii}
