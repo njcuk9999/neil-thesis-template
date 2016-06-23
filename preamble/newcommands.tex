@@ -1,0 +1,182 @@
+% \input{newcommands} must be added to root tex file for these to work
+%
+% This is basically where I define my new commands
+%
+% format is normally as follows:
+%
+%	\newcommand{\command}{stuff here will be executed on use of command}
+%
+%	then in text use \command to execute "stuff"
+%
+% ------------------------------------------------------------------------------
+% Physics
+% ------------------------------------------------------------------------------
+\newcommand{\arcsec}{\,\mbox{arcsec}\,}
+\newcommand{\Teff}{\mbox{$T_{eff}$}\,}
+\newcommand{\logg}{\mbox{$log$\,$g$}\,}
+\newcommand{\Msun}{\mbox{$M_{\odot}$}\,}
+\newcommand{\Mjup}{\mbox{$M_{Jup}$}\,}
+\newcommand{\Rsun}{\mbox{$R_{\odot}$}\,}
+\newcommand{\Lsun}{\mbox{$L_{\odot}$}\,}
+\newcommand{\micron}{\mbox{${\mu}$m}\,}
+%\newcommand{\arcsec}{\mbox{$^{\prime\prime}$}\,}
+\newcommand{\Rv}{\mbox{$R_{\text v}$}\,}
+\newcommand{\Av}{\mbox{$A_{\text v}$}\,}
+\newcommand{\Alam}{\mbox{$A_{\lambda}$}\,}
+\newcommand{\EBV}{\mbox{$E(B - V)$}\,}
+\newcommand{\halpha}{\mbox{H$\alpha$}\,}
+\newcommand{\nai}{\mbox{Na{\sc i}}\,}
+\newcommand{\MJ}{\mbox{$M_{J}$}\,}
+\newcommand{\MV}{\mbox{$M_{V}$}\,}
+\newcommand{\HJ}{\mbox{$H_{J}$}\,}
+\newcommand{\HV}{\mbox{$H_{V}$}\,}
+\newcommand{\degs}{\mbox{$^{\circ}$}\,}
+\newcommand{\Mpc}{\mbox{$Mpc$}\,}
+\newcommand{\Myr}{\mbox{$Myr$}\,}
+\newcommand{\Gyr}{\mbox{$Gyr$}\,}
+%--------------------------------------------------------------------------------
+% Maths
+%--------------------------------------------------------------------------------
+\newcommand{\simm}{$\sim$}
+\newcommand{\asin}{sin$^{-1}$}
+\newcommand{\la}{\lesssim}
+\newcommand{\ga}{\gtrsim}
+\newcommand{\chis}{$\chi$-squared}
+\newcommand{\chiS}{$\chi$-Squared}
+\newcommand{\tx}{\mbox{$\times10$}}
+
+%--------------------------------------------------------------------------------
+% Language
+%--------------------------------------------------------------------------------
+\newcommand{\etal}{et al.\,}
+\newcommand{\eg}{e.g.\,}
+\newcommand{\ie}{i.e.\,}
+
+%--------------------------------------------------------------------------------
+%define colour format
+%--------------------------------------------------------------------------------
+\newcommand{\BV}{\mbox{$(B-V)$}\,}  
+\newcommand{\UG}{\mbox{$(u-g)$}\,}        
+\newcommand{\GR}{\mbox{$(g-r)$}\,}
+\newcommand{\GI}{\mbox{$(g-i)$}\,}
+\newcommand{\RI}{\mbox{$(r-i)$}\,}
+\newcommand{\RZ}{\mbox{$(r-z)$}\,}
+\newcommand{\IZ}{\mbox{$(i-z)$}\,}
+\newcommand{\ZJ}{\mbox{$(z-J)$}\,}
+\newcommand{\VJ}{\mbox{$(V-J)$}\,}
+\newcommand{\JH}{\mbox{$(J-H)$}\,}
+\newcommand{\JK}{\mbox{$(J-K_S)$}\,}
+\newcommand{\HK}{\mbox{$(H-K_S)$}\,}
+\newcommand{\JWa}{\mbox{$(J-W1)$}\,}
+\newcommand{\JWb}{\mbox{$(J-W2)$}\,}
+\newcommand{\HWa}{\mbox{$(H-W1)$}\,}
+\newcommand{\HWb}{\mbox{$(H-W2)$}\,}
+\newcommand{\KWb}{\mbox{$(K_S-W2)$}\,}
+\newcommand{\WaWb}{\mbox{$(W1-W2)$}\,}
+\newcommand{\WaWc}{\mbox{$(W1-W3)$}\,}
+\newcommand{\WbWc}{\mbox{$(W2-W3)$}\,}
+
+%--------------------------------------------------------------------------------
+% Misc
+%--------------------------------------------------------------------------------
+\newcommand{\ipython}{{\sc ipython}}
+\newcommand{\python}{{\sc python}}
+
+%--------------------------------------------------------------------------------
+% Referencing
+%--------------------------------------------------------------------------------
+%list of abbreviations in bibfile that latex does not understand 
+\input{./referencing/article_names}
+%list of citing aliases
+\defcitealias{abell59}{AB59}
+
+%--------------------------------------------------------------------------------
+% Acronyms, indexing and referencing sections, figures, tables, equations
+%--------------------------------------------------------------------------------
+
+% From http://tex.stackexchange.com/questions/7992/
+%      command-to-uppercase-the-first-letter-of-each-word-in-a-sentence
+%
+% IMPORTANT NOTE index key is CASE SENSITIVE -- must have key the same in all cases
+%  use \defineas{Key}{key} to enable a uppercase word or just index after with \indeX
+\newcommand{\indeX}[1]{\index{#1@\protect\capitalisewords{#1}\xspace}}
+
+%Highlight index words
+
+%\newcommand{\define}[1]{\textcolor{Green}{#1}\indeX{#1}}
+%\newcommand{\defineas}[2]{\textcolor{Green}{#1}\indeX{#2}}
+
+% Do not highlight index words (final version)
+
+\newcommand{\define}[1]{#1\indeX{#1}}
+\newcommand{\defineas}[2]{#1\indeX{#2}}
+% use in this format (must have glossary entry)
+% 	\newcommand{\key}{key}{\index{key}\useglosentry{key}}
+%   \newcommand{\}{}{\index{}\useglosentry{}}
+\newcommand{\acro}[1]{\define{#1}\useglosentry{#1}}
+
+%Change default name for a Figure (between Fig. and Figure)
+\renewcommand{\figurename}{Figure.}
+%Default report style uses bibliography not references
+\renewcommand{\bibname}{References} % by default report style uses bibliography
+
+%referencing sections, figures, tables, equations
+\newcommand{\reffig}[1]{Figure \ref{#1}}
+\newcommand{\reftab}[1]{Table \ref{#1}}
+\newcommand{\refequ}[1]{Equation \ref{#1}}
+\newcommand{\refsec}[1]{Section \ref{#1}}
+
+%--------------------------------------------------------------------------------
+% Input Tables from tex file
+%--------------------------------------------------------------------------------
+% define a column type that is vertically and horizontally centered
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+% Below is my way to use tables (it is completely optional)
+% I store tables in separate .tex files and load them through these commands
+% to save time and space I use the reference as the file name
+% i.e.    ch1_table_my_first_table     would need ch1_table_my_first_table.tex
+
+% Use \inputtable{label}{caption}
+
+% note label must be same as table tex file name
+% note tex file must be placed in ./tables/ folder
+
+\newcommand{\inputtable}[2]{
+	\begin{table}
+	\begin{center}
+	\input{./tables/#1}
+	\caption{#2 \label{#1}}
+	\end{center}
+	\end{table}}%
+
+\newcommand{\inputtableS}[3]{
+	\begin{table}
+	\begin{center}
+	\input{./tables/#1}
+	\caption[#2]{#3 \label{#1}}
+	\end{center}
+	\end{table}}%
+
+\newcommand{\inputtablex}[3]{
+	\begin{table}[#3]
+	\begin{center}
+	\input{./tables/#1}
+	\caption{#2 \label{#1}}
+	\end{center}
+	\end{table}}%
+
+\DeclareCaptionFormat{cont}{#1 (cont.)#2#3\par}
+
+\newcommand{\inputtableC}[2]{
+	\begin{table}
+	\begin{center}
+    \ContinuedFloat
+    \captionsetup{list=off,format=cont}
+	\input{./tables/#1}
+	\caption{#2 \label{#1}}
+	\end{center}
+	\end{table}}%
+
+

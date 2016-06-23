@@ -1,0 +1,474 @@
+% This file will allow use of the /acknowledge command
+
+% Use in the following form:
+% \acknowledge{2MASS}
+
+% Warning will need hyperref package to use /url
+
+% Warning will need to copy reference (from below citation) to use \cite commands
+
+% add key as follows to \pgfkeys{}
+% \pgfkeys{/key/.code = {value}}
+% \pgfkeys{//.code = {}}
+
+% This is the command used to add an acknowledgement in text
+\newcommand{\acknowledge}[1]{\pgfkeys{{#1}}}
+
+% Must set this to change the type i.e when a acknowledgement states "This paper uses" \acknowledgetype will change this to "This {INSERT WORD HERE} uses", for use in switching between "work", "paper", "proposal", "thesis" etc
+\newcommand{\acknowledgetype}{thesis\,\,}
+
+% ------------------------------------------------------------------------------------------------------
+% Personal acknowledgements
+% ------------------------------------------------------------------------------------------------------
+
+\pgfkeys{/NJC/.code = {NJC acknowledges support from the UK's Science and Technology Facilities Council [grant number ST/K502029/1], and has benefited from IPERCOOL, grant number 247593 within the Marie Curie 7th European Community Framework Programme.}}
+
+\pgfkeys{/MG/.code = {MG acknowledges support from Joined Committee ESO and Government of Chile 2014 and Fondecyt Regular No. 1120601. Support for MG and RGK is provided by the Ministry for the Economy, Development, and Tourisms Programa Inicativa Cientifica Milenio through grant IC 12009, awarded to  The  Millennium  Institute  of  Astrophysics (MAS) and acknowledgement to CONICYT REDES No. 140042 project.}}
+
+\pgfkeys{/RGK/.code = {R.G.K. is supported by Fondecyt Regular No. 1130140.}}
+
+% ------------------------------------------------------------------------------------------------------
+% Online/Web Services
+% ------------------------------------------------------------------------------------------------------
+\pgfkeys{/ADS/.code = {This \acknowledgetype made use of NASA's Astrophysics Data System.}}
+
+\pgfkeys{/AstroBetter/.code = {This \acknowledgetype made use of the AstroBetter blog and wiki.}}
+
+\pgfkeys{/IRSA/.code = {This \acknowledgetype made use of the NASA/IPAC Infrared Science Archive, which is operated by the Jet Propulsion Laboratory, California Institute of Technology, under contract with the National Aeronautics and Space Administration.}}
+
+\pgfkeys{/MAST/.code = {Some/all of the data presented in this \acknowledgetype were obtained from the Mikulski Archive for Space Telescopes (MAST). STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555. Support for MAST for non-HST data is provided by the NASA Office of Space Science via grant NNX13AC07G and by other grants and contracts.}}
+
+\pgfkeys{/SIMBAD/.code = {This \acknowledgetype made use of the SIMBAD database, operated at CDS, Strasbourg, France.}}
+
+\pgfkeys{/SpeX/.code = {This \acknowledgetype has benefitted from the SpeX Prism Spectral Libraries, maintained by Adam Burgasser at \url{http://pono.ucsd.edu/~adam/browndwarfs/spexprism}.}}
+
+\pgfkeys{/VizieR/.code = {This \acknowledgetype made use of the VizieR catalogue access tool, CDS, Strasbourg, France. }}
+
+\pgfkeys{/WebPlotDigitizer/.code = {This \acknowledgetype made use of WebPlotDigitizer (\url{http://arohatgi.info/WebPlotDigitizer/}) by Ankit Rohatgi.}}
+
+\pgfkeys{/Xshooter/.code = {This \acknowledgetype made use of the X-shooter Spectral Library \citet{Chen2014} at \url{http://xsl.u-strasbg.fr/}.}}
+	% @ARTICLE{Chen2014,
+	%    author = {{Chen}, Y.-P. and {Trager}, S.~C. and {Peletier}, R.~F. and 
+	%   {Lan{\c c}on}, A. and {Vazdekis}, A. and {Prugniel}, P. and 
+	%   {Silva}, D.~R. and {Gonneau}, A.},
+	%     title = "{The X-shooter Spectral Library (XSL). I. DR1: Near-ultraviolet through optical spectra from the first year of the survey}",
+	%   journal = {\aap},
+	% archivePrefix = "arXiv",
+	%    eprint = {1403.7009},
+	%  primaryClass = "astro-ph.SR",
+	%  keywords = {stars: abundances, stars: fundamental parameters, stars: AGB and post-AGB, stars: atmospheres, galaxies: stellar content},
+	%      year = 2014,
+	%     month = may,
+	%    volume = 565,
+	%       eid = {A117},
+	%     pages = {A117},
+	%       doi = {10.1051/0004-6361/201322505},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2014A%26A...565A.117C},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+% ------------------------------------------------------------------------------------------------------
+% Codes and Software
+% ------------------------------------------------------------------------------------------------------
+\pgfkeys{/Aladin/.code = {This \acknowledgetype made use of {\sc Aladin}, an interactive software sky atlas} \citep{Bonnarel2000}}
+	% @ARTICLE{Bonnarel2000,
+	%    author = {{Bonnarel}, F. and {Fernique}, P. and {Bienaym{\'e}}, O. and 
+	%   {Egret}, D. and {Genova}, F. and {Louys}, M. and {Ochsenbein}, F. and 
+	%   {Wenger}, M. and {Bartlett}, J.~G.},
+	%     title = "{The ALADIN interactive sky atlas. A reference tool for identification of astronomical sources}",
+	%   journal = {\aaps},
+	%  keywords = {ASTRONOMICAL DATA BASES: MISCELLANEOUS, CATALOGS, ATLASES, SURVEYS},
+	%      year = 2000,
+	%     month = apr,
+	%    volume = 143,
+	%     pages = {33-40},
+	%       doi = {10.1051/aas:2000331},
+	%    adsurl = {http://cdsads.u-strasbg.fr/abs/2000A%26AS..143...33B},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+\pgfkeys{/APLpy/.code = {This \acknowledgetype made use of APLpy, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}.}}
+
+
+
+\pgfkeys{/Astropy/.code = {This \acknowledgetype made use of Astropy, a community-developed core Python package for Astronomy \citep{Astropy2013}.}}
+	% @ARTICLE{Astropy2013,
+	%    author = {{Astropy Collaboration} and {Robitaille}, T.~P. and {Tollerud}, E.~J. and 
+	%   {Greenfield}, P. and {Droettboom}, M. and {Bray}, E. and {Aldcroft}, T. and 
+	%   {Davis}, M. and {Ginsburg}, A. and {Price-Whelan}, A.~M. and 
+	%   {Kerzendorf}, W.~E. and {Conley}, A. and {Crighton}, N. and 
+	%   {Barbary}, K. and {Muna}, D. and {Ferguson}, H. and {Grollier}, F. and 
+	%   {Parikh}, M.~M. and {Nair}, P.~H. and {Unther}, H.~M. and {Deil}, C. and 
+	%   {Woillez}, J. and {Conseil}, S. and {Kramer}, R. and {Turner}, J.~E.~H. and 
+	%   {Singer}, L. and {Fox}, R. and {Weaver}, B.~A. and {Zabalza}, V. and 
+	%   {Edwards}, Z.~I. and {Azalee Bostroem}, K. and {Burke}, D.~J. and 
+	%   {Casey}, A.~R. and {Crawford}, S.~M. and {Dencheva}, N. and 
+	%   {Ely}, J. and {Jenness}, T. and {Labrie}, K. and {Lim}, P.~L. and 
+	%   {Pierfederici}, F. and {Pontzen}, A. and {Ptak}, A. and {Refsdal}, B. and 
+	%   {Servillat}, M. and {Streicher}, O.},
+	%     title = "{Astropy: A community Python package for astronomy}",
+	%   journal = {\aap},
+	% archivePrefix = "arXiv",
+	%    eprint = {1307.6212},
+	%  primaryClass = "astro-ph.IM",
+	%  keywords = {methods: data analysis, methods: miscellaneous, virtual observatory tools},
+	%      year = 2013,
+	%     month = oct,
+	%    volume = 558,
+	%       eid = {A33},
+	%     pages = {A33},
+	%       doi = {10.1051/0004-6361/201322068},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2013A%26A...558A..33A},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+\pgfkeys{/IPython/.code = {This \acknowledgetype made use of the IPython package \citep{Perez2007}.}}
+	% @Article{Perez2007, 
+	% Author = {P\'erez, Fernando and Granger, Brian E.}, 
+	% Title = {{IP}ython: a System for Interactive Scientific Computing}, 
+	% Journal = {Computing in Science and Engineering}, 
+	% Volume = {9}, 
+	% Number = {3}, Pages = {21--29}, 
+	% month = may, 
+	% year = 2007, 
+	% url = "http://ipython.org", 
+	% ISSN = "1521-9615", 
+	% doi = {10.1109/MCSE.2007.53}, 
+	% publisher = {IEEE Computer Society}, }
+
+\pgfkeys{/Matplotlib/.code = {This \acknowledgetype made use of matplotlib, a Python library for publication quality graphics \citep{Hunter2007}.}}
+	% @Article{Hunter2007, 
+	% Author = {Hunter, J. D.}, 
+	% Title = {Matplotlib: A 2D graphics environment}, 
+	% Journal = {Computing In Science \& Engineering}, 
+	% Volume = {9}, 
+	% Number = {3}, 
+	% Pages = {90--95}, 
+	% publisher = {IEEE COMPUTER SOC}, year = 2007}
+
+\pgfkeys{/SciPy/.code = {This \acknowledgetype made use of SciPy \citep{Jones2001}.}}
+	% @misc{Jones2001, 
+	% title = {{SciPy}: Open source scientific tools for Python}, 
+	% url = {http://www.scipy.org/}, 
+	% collaborator = {Jones, E. and Oliphant, T. and Peterson, P. and Others}, 
+	% year = {2001} }
+
+\pgfkeys{/TOPCAT/.code = {This \acknowledgetype made use of TOPCAT, an interactive graphical viewer and editor for tabular data \citep{Taylor2005}.}}
+	% @InProceedings{Taylor2005,
+	%   author =    {{Taylor}, M.~B.},
+	%   title =     {{TOPCAT {\amp} STIL: Starlink Table/VOTable Processing Software}},
+	%   booktitle = {Astronomical Data Analysis Software and Systems XIV},
+	%   year =      {2005},
+	%   editor =    {{Shopbell}, P. and {Britton}, M. and {Ebert}, R.},
+	%   volume =    {347},
+	%   series =    {Astronomical Society of the Pacific Conference Series},
+	%   pages =     {29},
+	%   month =     dec,
+	%   adsnote =   {Provided by the SAO/NASA Astrophysics Data System},
+	%   adsurl =    {http://adsabs.harvard.edu/abs/2005ASPC..347...29T}
+	% }
+
+% ------------------------------------------------------------------------------------------------------
+% Surveys
+% ------------------------------------------------------------------------------------------------------
+
+
+\pgfkeys{/2MASS/.code = {This \acknowledgetype makes use of data products from the Two Micron All Sky Survey\citep{Skrutskie2006}, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation.}}
+	% @ARTICLE{Skrutskie2006,
+	%    author = {{Skrutskie}, M.~F. and {Cutri}, R.~M. and {Stiening}, R. and 
+	%   {Weinberg}, M.~D. and {Schneider}, S. and {Carpenter}, J.~M. and 
+	%   {Beichman}, C. and {Capps}, R. and {Chester}, T. and {Elias}, J. and 
+	%   {Huchra}, J. and {Liebert}, J. and {Lonsdale}, C. and {Monet}, D.~G. and 
+	%   {Price}, S. and {Seitzer}, P. and {Jarrett}, T. and {Kirkpatrick}, J.~D. and 
+	%   {Gizis}, J.~E. and {Howard}, E. and {Evans}, T. and {Fowler}, J. and 
+	%   {Fullmer}, L. and {Hurt}, R. and {Light}, R. and {Kopan}, E.~L. and 
+	%   {Marsh}, K.~A. and {McCallon}, H.~L. and {Tam}, R. and {Van Dyk}, S. and 
+	%   {Wheelock}, S.},
+	%     title = "{The Two Micron All Sky Survey (2MASS)}",
+	%   journal = {\aj},
+	%  keywords = {Catalogs, Infrared: General, Surveys},
+	%      year = 2006,
+	%     month = feb,
+	%    volume = 131,
+	%     pages = {1163-1183},
+	%       doi = {10.1086/498708},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2006AJ....131.1163S},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+
+\pgfkeys{/DSS/.code = {The Digitized Sky Surveys were produced at the Space Telescope Science Institute under U.S. Government grant NAG W-2166. The images of these surveys are based on photographic data obtained using the Oschin Schmidt Telescope on Palomar Mountain and the UK Schmidt Telescope. The plates were processed into the present compressed digital form with the permission of these institutions. The National Geographic Society - Palomar Observatory Sky Atlas (POSS-I) was made by the California Institute of Technology with grants from the National Geographic Society. The Second Palomar Observatory Sky Survey (POSS-II) was made by the California Institute of Technology with funds from the National Science Foundation, the National Geographic Society, the Sloan Foundation, the Samuel Oschin Foundation, and the Eastman Kodak Corporation. The Oschin Schmidt Telescope is operated by the California Institute of Technology and Palomar Observatory. The UK Schmidt Telescope was operated by the Royal Observatory Edinburgh, with funding from the UK Science and Engineering Research Council (later the UK Particle Physics and Astronomy Research Council), until 1988 June, and thereafter by the Anglo-Australian Observatory. The blue plates of the southern Sky Atlas and its Equatorial Extension (together known as the SERC-J), as well as the Equatorial Red (ER), and the Second Epoch [red] Survey (SES) were all taken with the UK Schmidt. All data are subject to the copyright given in the copyright summary. Copyright information specific to individual plates is provided in the downloaded FITS headers. Supplemental funding for sky-survey work at the ST ScI is provided by the European Southern Observatory.}}
+
+
+\pgfkeys{/PPMXL/.code = {This \acknowledgetype is based in part on services provided by the GAVO Data Center and the data products from the PPMXL database of \citet{Roeser2010}.}}
+	% @ARTICLE{Roeser2010,
+	%    author = {{Roeser}, S. and {Demleitner}, M. and {Schilbach}, E.},
+	%     title = "{The PPMXL Catalog of Positions and Proper Motions on the ICRS. Combining USNO-B1.0 and the Two Micron All Sky Survey (2MASS)}",
+	%   journal = {\aj},
+	% archivePrefix = "arXiv",
+	%    eprint = {1003.5852},
+	%  primaryClass = "astro-ph.GA",
+	%  keywords = {astrometry, catalogs, Galaxy: kinematics and dynamics, proper motions},
+	%      year = 2010,
+	%     month = jun,
+	%    volume = 139,
+	%     pages = {2440-2447},
+	%       doi = {10.1088/0004-6256/139/6/2440},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2010AJ....139.2440R},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+\pgfkeys{/SDSS/.code = {Funding for the SDSS and SDSS-II\citep{York2000} has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. The Participating Institutions are the American Museum of Natural History, Astrophysical Institute Potsdam, University of Basel, University of Cambridge, Case Western Reserve University, University of Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the Japan Participation Group, Johns Hopkins University, the Joint Institute for Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences (LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico State University, Ohio State University, University of Pittsburgh, University of Portsmouth, Princeton University, the United States Naval Observatory, and the University of Washington. }}
+	% @ARTICLE{York2000,
+	%    author = {{York}, D.~G. and {Adelman}, J. and {Anderson}, Jr., J.~E. and 
+	%   {Anderson}, S.~F. and {Annis}, J. and {Bahcall}, N.~A. and {Bakken}, J.~A. and 
+	%   {Barkhouser}, R. and {Bastian}, S. and {Berman}, E. and {Boroski}, W.~N. and 
+	%   {Bracker}, S. and {Briegel}, C. and {Briggs}, J.~W. and {Brinkmann}, J. and 
+	%   {Brunner}, R. and {Burles}, S. and {Carey}, L. and {Carr}, M.~A. and 
+	%   {Castander}, F.~J. and {Chen}, B. and {Colestock}, P.~L. and 
+	%   {Connolly}, A.~J. and {Crocker}, J.~H. and {Csabai}, I. and 
+	%   {Czarapata}, P.~C. and {Davis}, J.~E. and {Doi}, M. and {Dombeck}, T. and 
+	%   {Eisenstein}, D. and {Ellman}, N. and {Elms}, B.~R. and {Evans}, M.~L. and 
+	%   {Fan}, X. and {Federwitz}, G.~R. and {Fiscelli}, L. and {Friedman}, S. and 
+	%   {Frieman}, J.~A. and {Fukugita}, M. and {Gillespie}, B. and 
+	%   {Gunn}, J.~E. and {Gurbani}, V.~K. and {de Haas}, E. and {Haldeman}, M. and 
+	%   {Harris}, F.~H. and {Hayes}, J. and {Heckman}, T.~M. and {Hennessy}, G.~S. and 
+	%   {Hindsley}, R.~B. and {Holm}, S. and {Holmgren}, D.~J. and {Huang}, C.-h. and 
+	%   {Hull}, C. and {Husby}, D. and {Ichikawa}, S.-I. and {Ichikawa}, T. and 
+	%   {Ivezi{\'c}}, {\v Z}. and {Kent}, S. and {Kim}, R.~S.~J. and 
+	%   {Kinney}, E. and {Klaene}, M. and {Kleinman}, A.~N. and {Kleinman}, S. and 
+	%   {Knapp}, G.~R. and {Korienek}, J. and {Kron}, R.~G. and {Kunszt}, P.~Z. and 
+	%   {Lamb}, D.~Q. and {Lee}, B. and {Leger}, R.~F. and {Limmongkol}, S. and 
+	%   {Lindenmeyer}, C. and {Long}, D.~C. and {Loomis}, C. and {Loveday}, J. and 
+	%   {Lucinio}, R. and {Lupton}, R.~H. and {MacKinnon}, B. and {Mannery}, E.~J. and 
+	%   {Mantsch}, P.~M. and {Margon}, B. and {McGehee}, P. and {McKay}, T.~A. and 
+	%   {Meiksin}, A. and {Merelli}, A. and {Monet}, D.~G. and {Munn}, J.~A. and 
+	%   {Narayanan}, V.~K. and {Nash}, T. and {Neilsen}, E. and {Neswold}, R. and 
+	%   {Newberg}, H.~J. and {Nichol}, R.~C. and {Nicinski}, T. and 
+	%   {Nonino}, M. and {Okada}, N. and {Okamura}, S. and {Ostriker}, J.~P. and 
+	%   {Owen}, R. and {Pauls}, A.~G. and {Peoples}, J. and {Peterson}, R.~L. and 
+	%   {Petravick}, D. and {Pier}, J.~R. and {Pope}, A. and {Pordes}, R. and 
+	%   {Prosapio}, A. and {Rechenmacher}, R. and {Quinn}, T.~R. and 
+	%   {Richards}, G.~T. and {Richmond}, M.~W. and {Rivetta}, C.~H. and 
+	%   {Rockosi}, C.~M. and {Ruthmansdorfer}, K. and {Sandford}, D. and 
+	%   {Schlegel}, D.~J. and {Schneider}, D.~P. and {Sekiguchi}, M. and 
+	%   {Sergey}, G. and {Shimasaku}, K. and {Siegmund}, W.~A. and {Smee}, S. and 
+	%   {Smith}, J.~A. and {Snedden}, S. and {Stone}, R. and {Stoughton}, C. and 
+	%   {Strauss}, M.~A. and {Stubbs}, C. and {SubbaRao}, M. and {Szalay}, A.~S. and 
+	%   {Szapudi}, I. and {Szokoly}, G.~P. and {Thakar}, A.~R. and {Tremonti}, C. and 
+	%   {Tucker}, D.~L. and {Uomoto}, A. and {Vanden Berk}, D. and {Vogeley}, M.~S. and 
+	%   {Waddell}, P. and {Wang}, S.-i. and {Watanabe}, M. and {Weinberg}, D.~H. and 
+	%   {Yanny}, B. and {Yasuda}, N. and {SDSS Collaboration}},
+	%     title = "{The Sloan Digital Sky Survey: Technical Summary}",
+	%   journal = {\aj},
+	%    eprint = {astro-ph/0006396},
+	%  keywords = {Cosmology: Observations, Instrumentation: Miscellaneous},
+	%      year = 2000,
+	%     month = sep,
+	%    volume = 120,
+	%     pages = {1579-1587},
+	%       doi = {10.1086/301513},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2000AJ....120.1579Y},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+
+\pgfkeys{/SDSS3/.code = {Funding for SDSS-III\citep{Ahn2012} has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, and the U.S. Department of Energy Office of Science. The SDSS-III web site is \url{http://www.sdss3.org/}. SDSS-III is managed by the Astrophysical Research Consortium for the Participating Institutions of the SDSS-III Collaboration including the University of Arizona, the Brazilian Participation Group, Brookhaven National Laboratory, University of Cambridge, Carnegie Mellon University, University of Florida, the French Participation Group, the German Participation Group, Harvard University, the Instituto de Astrofisica de Canarias, the Michigan State/Notre Dame/JINA Participation Group, Johns Hopkins University, Lawrence Berkeley National Laboratory, Max Planck Institute for Astrophysics, Max Planck Institute for Extraterrestrial Physics, New Mexico State University, New York University, Ohio State University, Pennsylvania State University, University of Portsmouth, Princeton University, the Spanish Participation Group, University of Tokyo, University of Utah, Vanderbilt University, University of Virginia, University of Washington, and Yale University. }}
+	% @ARTICLE{Ahn2012,
+	%    author = {{Ahn}, C.~P. and {Alexandroff}, R. and {Allende Prieto}, C. and 
+	%   {Anderson}, S.~F. and {Anderton}, T. and {Andrews}, B.~H. and 
+	%   {Aubourg}, {\'E}. and {Bailey}, S. and {Balbinot}, E. and {Barnes}, R. and et al.},
+	%     title = "{The Ninth Data Release of the Sloan Digital Sky Survey: First Spectroscopic Data from the SDSS-III Baryon Oscillation Spectroscopic Survey}",
+	%   journal = {\apjs},
+	% archivePrefix = "arXiv",
+	%    eprint = {1207.7137},
+	%  primaryClass = "astro-ph.IM",
+	%  keywords = {atlases, catalogs, surveys },
+	%      year = 2012,
+	%     month = dec,
+	%    volume = 203,
+	%       eid = {21},
+	%     pages = {21},
+	%       doi = {10.1088/0067-0049/203/2/21},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2012ApJS..203...21A},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+
+\pgfkeys{/UKIDSS/.code = {This \acknowledgetype is  based  in  part  on  data  obtained  as  part  of  the
+UKIRT Infrared Deep Sky Survey (UKIDSS). The UKIDSS project is defined in \citet{Lawrence2007}. UKIDSS uses the UKIRT Wide Field Camera \citep[WFCAM][]{Casali2007}. The photometric system is described in \citet{Hewett2006}, and the calibration is described in \citet{Hodgkin2009}. The pipeline processing and science archive are described in \citet{Hambly2008}}}
+
+	% @ARTICLE{Lawrence2007,
+	%    author = {{Lawrence}, A. and {Warren}, S.~J. and {Almaini}, O. and {Edge}, A.~C. and 
+	%   {Hambly}, N.~C. and {Jameson}, R.~F. and {Lucas}, P. and {Casali}, M. and 
+	%   {Adamson}, A. and {Dye}, S. and {Emerson}, J.~P. and {Foucaud}, S. and 
+	%   {Hewett}, P. and {Hirst}, P. and {Hodgkin}, S.~T. and {Irwin}, M.~J. and 
+	%   {Lodieu}, N. and {McMahon}, R.~G. and {Simpson}, C. and {Smail}, I. and 
+	%   {Mortlock}, D. and {Folger}, M.},
+	%     title = "{The UKIRT Infrared Deep Sky Survey (UKIDSS)}",
+	%   journal = {\mnras},
+	%    eprint = {astro-ph/0604426},
+	%  keywords = {surveys, infrared: general},
+	%      year = 2007,
+	%     month = aug,
+	%    volume = 379,
+	%     pages = {1599-1617},
+	%       doi = {10.1111/j.1365-2966.2007.12040.x},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2007MNRAS.379.1599L},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+	% @ARTICLE{Casali2007,
+	%    author = {{Casali}, M. and {Adamson}, A. and {Alves de Oliveira}, C. and 
+	%   {Almaini}, O. and {Burch}, K. and {Chuter}, T. and {Elliot}, J. and 
+	%   {Folger}, M. and {Foucaud}, S. and {Hambly}, N. and {Hastie}, M. and 
+	%   {Henry}, D. and {Hirst}, P. and {Irwin}, M. and {Ives}, D. and 
+	%   {Lawrence}, A. and {Laidlaw}, K. and {Lee}, D. and {Lewis}, J. and 
+	%   {Lunney}, D. and {McLay}, S. and {Montgomery}, D. and {Pickup}, A. and 
+	%   {Read}, M. and {Rees}, N. and {Robson}, I. and {Sekiguchi}, K. and 
+	%   {Vick}, A. and {Warren}, S. and {Woodward}, B.},
+	%     title = "{The UKIRT wide-field camera}",
+	%   journal = {\aap},
+	%  keywords = {instrumentation: miscellaneous, infrared: general},
+	%      year = 2007,
+	%     month = may,
+	%    volume = 467,
+	%     pages = {777-784},
+	%       doi = {10.1051/0004-6361:20066514},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2007A%26A...467..777C},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+	% @ARTICLE{Hewett2006,
+	%    author = {{Hewett}, P.~C. and {Warren}, S.~J. and {Leggett}, S.~K. and 
+	%   {Hodgkin}, S.~T.},
+	%     title = "{The UKIRT Infrared Deep Sky Survey ZY JHK photometric system: passbands and synthetic colours}",
+	%   journal = {\mnras},
+	%    eprint = {astro-ph/0601592},
+	%  keywords = {surveys, infrared: general},
+	%      year = 2006,
+	%     month = apr,
+	%    volume = 367,
+	%     pages = {454-468},
+	%       doi = {10.1111/j.1365-2966.2005.09969.x},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2006MNRAS.367..454H},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+	% @ARTICLE{Hodgkin2009,
+	%    author = {{Hodgkin}, S.~T. and {Irwin}, M.~J. and {Hewett}, P.~C. and 
+	%   {Warren}, S.~J.},
+	%     title = "{The UKIRT wide field camera ZYJHK photometric system: calibration from 2MASS}",
+	%   journal = {\mnras},
+	% archivePrefix = "arXiv",
+	%    eprint = {0812.3081},
+	%  keywords = {surveys , infrared: general},
+	%      year = 2009,
+	%     month = apr,
+	%    volume = 394,
+	%     pages = {675-692},
+	%       doi = {10.1111/j.1365-2966.2008.14387.x},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2009MNRAS.394..675H},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+	% @ARTICLE{Hambly2008,
+	%    author = {{Hambly}, N.~C. and {Collins}, R.~S. and {Cross}, N.~J.~G. and 
+	%   {Mann}, R.~G. and {Read}, M.~A. and {Sutorius}, E.~T.~W. and 
+	%   {Bond}, I. and {Bryant}, J. and {Emerson}, J.~P. and {Lawrence}, A. and 
+	%   {Rimoldini}, L. and {Stewart}, J.~M. and {Williams}, P.~M. and 
+	%   {Adamson}, A. and {Hirst}, P. and {Dye}, S. and {Warren}, S.~J.
+	%   },
+	%     title = "{The WFCAM Science Archive}",
+	%   journal = {\mnras},
+	% archivePrefix = "arXiv",
+	%    eprint = {0711.3593},
+	%  keywords = {astronomical data bases: miscellaneous , surveys , stars: general , galaxies: general , cosmology: observations , infrared: general},
+	%      year = 2008,
+	%     month = feb,
+	%    volume = 384,
+	%     pages = {637-662},
+	%       doi = {10.1111/j.1365-2966.2007.12700.x},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2008MNRAS.384..637H},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+\pgfkeys{/USNO/.code = {This research has made use of the USNO Image and Catalogue Archive operated by the United States Naval Observatory, Flagstaff Station (\url{http://www.nofs.navy.mil/data/fchpix/}) from \citet{Monet1998}.}}
+	% @BOOK{Monet1998,
+	%    author = {{Monet}, D.},
+	%     title = "{USNO-A2.0}",
+	%  keywords = {Stars, Astrometry},
+	% booktitle = {USNO-A2.0, by Monet, David.~ [Flagstaff, AZ] : U.S.~Naval Observatory, c1998.~.~United States Naval Observatory.},
+	%      year = 1998,
+	%    adsurl = {http://adsabs.harvard.edu/abs/1998usno.book.....M},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+\pgfkeys{/WISE/.code = {This \acknowledgetype makes use of data products from the Wide-field Infrared Survey Explorer\citep{Wright2010}, which is a joint project of the University of California, Los Angeles, and the Jet Propulsion Laboratory/California Institute of Technology, funded by the National Aeronautics and Space Administration.}}
+	% @ARTICLE{Wright2010,
+	%    author = {{Wright}, E.~L. and {Eisenhardt}, P.~R.~M. and {Mainzer}, A.~K. and 
+	%   {Ressler}, M.~E. and {Cutri}, R.~M. and {Jarrett}, T. and {Kirkpatrick}, J.~D.    and {Padgett}, D. and {McMillan}, R.~S. and {Skrutskie}, M. and 
+	%   {Stanford}, S.~A. and {Cohen}, M. and {Walker}, R.~G. and {Mather}, J.~C. and 
+	%   {Leisawitz}, D. and {Gautier}, III, T.~N. and {McLean}, I. and 
+	%   {Benford}, D. and {Lonsdale}, C.~J. and {Blain}, A. and {Mendez}, B. and 
+	%   {Irace}, W.~R. and {Duval}, V. and {Liu}, F. and {Royer}, D. and 
+	%   {Heinrichsen}, I. and {Howard}, J. and {Shannon}, M. and {Kendall}, M. and 
+	%   {Walsh}, A.~L. and {Larsen}, M. and {Cardon}, J.~G. and {Schick}, S. and 
+	%   {Schwalm}, M. and {Abid}, M. and {Fabinsky}, B. and {Naes}, L. and 
+	%   {Tsai}, C.-W.},
+	%     title = "{The Wide-field Infrared Survey Explorer (WISE): Mission Description and Initial On-orbit Performance}",
+	%   journal = {\aj},
+	% archivePrefix = "arXiv",
+	%    eprint = {1008.0031},
+	%  primaryClass = "astro-ph.IM",
+	%  keywords = {infrared: general, space vehicles, surveys},
+	%      year = 2010,
+	%     month = dec,
+	%    volume = 140,
+	%       eid = {1868},
+	%     pages = {1868-1881},
+	%       doi = {10.1088/0004-6256/140/6/1868},
+	%    adsurl = {http://adsabs.harvard.edu/abs/2010AJ....140.1868W},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+
+% ------------------------------------------------------------------------------------------------------
+% Telescope
+% ------------------------------------------------------------------------------------------------------
+
+\pgfkeys{/Kepler/.code = {This \acknowledgetype includes data collected by the Kepler mission. Funding for the Kepler mission is provided by the NASA Science Mission directorate.}}
+
+\pgfkeys{/LAMOST/.code = {This \acknowledgetype makes use of the Guoshoujing Telescope (the Large Sky Area Multi-Object Fiber Spectroscopic Telescope LAMOST, \citealt{Cui2012}) and is a National Major Scientific Project built by the Chinese Academy of Sciences. Funding for the project has been provided by the National Development and Reform Commission. LAMOST is operated and managed by the National Astronomical Observatories, Chinese Academy of Sciences.}}
+	% @ARTICLE{Cui2012,
+	%    author = {{Cui}, X.-Q. and {Zhao}, Y.-H. and {Chu}, Y.-Q. and {Li}, G.-P. and 
+	%   {Li}, Q. and {Zhang}, L.-P. and {Su}, H.-J. and {Yao}, Z.-Q. and 
+	%   {Wang}, Y.-N. and {Xing}, X.-Z. and {Li}, X.-N. and {Zhu}, Y.-T. and 
+	%   {Wang}, G. and {Gu}, B.-Z. and {Luo}, A.-L. and {Xu}, X.-Q. and 
+	%   {Zhang}, Z.-C. and {Liu}, G.-R. and {Zhang}, H.-T. and {Yang}, D.-H. and 
+	%   {Cao}, S.-Y. and {Chen}, H.-Y. and {Chen}, J.-J. and {Chen}, K.-X. and 
+	%   {Chen}, Y. and {Chu}, J.-R. and {Feng}, L. and {Gong}, X.-F. and 
+	%   {Hou}, Y.-H. and {Hu}, H.-Z. and {Hu}, N.-S. and {Hu}, Z.-W. and 
+	%   {Jia}, L. and {Jiang}, F.-H. and {Jiang}, X. and {Jiang}, Z.-B. and 
+	%   {Jin}, G. and {Li}, A.-H. and {Li}, Y. and {Li}, Y.-P. and {Liu}, G.-Q. and 
+	%   {Liu}, Z.-G. and {Lu}, W.-Z. and {Mao}, Y.-D. and {Men}, L. and 
+	%   {Qi}, Y.-J. and {Qi}, Z.-X. and {Shi}, H.-M. and {Tang}, Z.-H. and 
+	%   {Tao}, Q.-S. and {Wang}, D.-Q. and {Wang}, D. and {Wang}, G.-M. and 
+	%   {Wang}, H. and {Wang}, J.-N. and {Wang}, J. and {Wang}, J.-L. and 
+	%   {Wang}, J.-P. and {Wang}, L. and {Wang}, S.-Q. and {Wang}, Y. and 
+	%   {Wang}, Y.-F. and {Xu}, L.-Z. and {Xu}, Y. and {Yang}, S.-H. and 
+	%   {Yu}, Y. and {Yuan}, H. and {Yuan}, X.-Y. and {Zhai}, C. and 
+	%   {Zhang}, J. and {Zhang}, Y.-X. and {Zhang}, Y. and {Zhao}, M. and 
+	%   {Zhou}, F. and {Zhou}, G.-H. and {Zhu}, J. and {Zou}, S.-C.},
+	%     title = "{The Large Sky Area Multi-Object Fiber Spectroscopic Telescope (LAMOST)}",
+	%   journal = {Research in Astronomy and Astrophysics},
+	%      year = 2012,
+	%     month = sep,
+	%    volume = 12,
+	%     pages = {1197-1242},
+	%       doi = {10.1088/1674-4527/12/9/003},
+	%    adsurl = {http://ukads.nottingham.ac.uk/abs/2012RAA....12.1197C},
+	%   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+	% }
+
+
