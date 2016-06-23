@@ -149,7 +149,7 @@ to open with the gnome default pdf program.
 *NOTE: after compiling all temp files are moved to a `trash' folder located at ./trash/, this can be turned off (or made optional) by editing the end of the compile file.*
 
 
-### 2.2 Modifying you TeX path
+### 2.2 Modifying your TeX path
 
 For this installation to work you will need to make sure LaTeX can see the *./latex_resources/* folder (or that that contents of *./latex_resources/* is copied to the LaTeX path).
 
