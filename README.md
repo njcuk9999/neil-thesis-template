@@ -15,7 +15,7 @@ students at the University of Hertfordshire.
 
 The following should be found within the extracted directory.
 
-```tex
+```TeX
     ./appendices/
         appendixA.tex       
         appendixB.tex
