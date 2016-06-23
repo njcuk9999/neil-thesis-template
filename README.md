@@ -13,7 +13,7 @@ The manual can be viewed in pdf format by opening main.pdf or compiling main.tex
   * [3.1 Using table commands](#31-using-table-commmands)
     * [3.1.1 The Input table command](#3.1.1-the-input-table-command)
     * [3.1.2 Landscape table](#312-landscape-table)
-  * [3.2 Cartoon footnotes (for supervisors that get bored quickly)](#32-cartoon-footnotes)
+  * [3.2 Cartoon footnotes (for supervisors that get bored quickly)](#32-cartoon-footnotes-for-supervisors-that-get-bored-quickly)
   * [3.3 Indexing](#33-indexing)
   * [3.4 Using the glossary](#34-using-the-glossary)
   * [3.5 Using acknowledgement citations](#35-using-acknowledgement)
