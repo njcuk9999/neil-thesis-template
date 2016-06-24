@@ -29,6 +29,8 @@ passed on to me by Dr. Federico Marocco and was originally created by Dr. Kieran
 Forde (2007) and in various forms have been used by many of the astrophysics PhD
 students at the University of Hertfordshire.
 
+[Back to top](#neil-thesis-template)
+
 ### 1.1 File structure and contents
 
 The following should be found within the extracted directory.
@@ -76,6 +78,8 @@ main.pdf
 main.tex
 phd.cls
 ```
+
+[Back to top](#neil-thesis-template)
 
 ## 2 Installation and running code
 
@@ -151,6 +155,7 @@ to open with the gnome default pdf program.
 
 *NOTE: after compiling all temp files are moved to a `trash' folder located at ./trash/, this can be turned off (or made optional) by editing the end of the compile file.*
 
+[Back to top](#neil-thesis-template)
 
 ### 2.2 Modifying your TeX path
 
@@ -171,6 +176,8 @@ setenv TEXMFHOME {PATH TO DIR}/latex_resources//
 ```
 setenv TEXMFHOME {PATH TO DIR}/latex_resources//:{$TEXMFHOME}
 ```
+
+[Back to top](#neil-thesis-template)
 
 ## 3 Some useful information
 
@@ -197,6 +204,8 @@ The content of the .tex file is a tabular environment i.e.:
 \end{tabular}
 ```
 
+[Back to top](#neil-thesis-template)
+
 #### 3.1.2 Landscape table
 
 *inputtable* also works in landscape (as see below), this landscape command also works with native LaTeX table environments.
@@ -206,6 +215,8 @@ The content of the .tex file is a tabular environment i.e.:
 \inputtable{reference and filename}{full caption}
 \end{landscape}
 ```
+
+[Back to top](#neil-thesis-template)
 
 #### 3.1.3 Continued table
 
@@ -221,6 +232,8 @@ In addition one can add a continued table as two smaller tables using the *input
 \end{landscape}
 ```
 An example of these table commands can be seen in Table 1.3 in the pdf (note landscape tables start a new page at the location the command is used and may lead to white space. One can generally just put the table later to avoid this if it is unwanted).
+
+[Back to top](#neil-thesis-template)
 
 ### 3.2 Cartoon footnotes (for supervisors that get bored quickly)
 
@@ -266,6 +279,8 @@ These lines can just be commented out to remove this from the document as it inc
 
 ```
 
+[Back to top](#neil-thesis-template)
+
 ### 3.3 Indexing
 
 There are multiple ways to use the indexing. I use two commands to save on space.
@@ -298,6 +313,8 @@ this was useful to judge contamination
 
 This adds the words *\define{star}*, *\define{photometry}* and *\define{contamination}* to the index (with a page reference to this page).
 
+[Back to top](#neil-thesis-template)
+
 ### 3.4 Using the glossary
 
 I use a glossary to define terms such as *\acro{2MASS}*, *\acro{WISE}*, *\acro{NIR}* or *\acro{SNR}*.
@@ -312,6 +329,8 @@ displays the word in the text, and adds the key to the glossary and the index.
 ```
 
 adds the key only to the glossary only.
+
+[Back to top](#neil-thesis-template)
 
 ### 3.5 Using acknowledgement citations
 
@@ -360,6 +379,8 @@ where * \acknowledgetype*  is set near the start of *./preamble/acknowledgement_
 \newcommand{\acknowledgetype}{thesis\,\,}
 ```
 editing the text in red in the above will change all acknowledgements to use this instead of thesis (see above).
+
+[Back to top](#neil-thesis-template)
 
 ### 3.6 Referencing Figures, Tables and Sections
 
@@ -424,3 +445,6 @@ is also shown in \reftab{ch1_table_3}.
 This would give the following text:
 
 > Figure 1 shows x against y (from Section 1.2) and is also shown in Table 3.
+
+
+[Back to top](#neil-thesis-template)
