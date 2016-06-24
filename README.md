@@ -18,6 +18,9 @@ The manual can be viewed in pdf format by opening main.pdf or compiling main.tex
   * [3.4 Using the glossary](#34-using-the-glossary)
   * [3.5 Using acknowledgement citations](#35-using-acknowledgement-citations)
   * [3.6 Referencing figures, tables and sections](#36-referencing-figures-tables-and-sections)
+    * [Figures](#these-are-defined-for-a-figure)
+    * [Tables](#a-table)
+    * [Sections](#and-a-section)
 
 ## 1  Credit for this template
 This template was not created by me (Neil Cook) though I added some functionality,
