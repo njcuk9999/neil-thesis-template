@@ -31,7 +31,7 @@
 \usepackage{longtable}             % Al­low ta­bles to flow over page bound­aries
 \usepackage{caption}               % Allows custom captions (used in continued tables)
 \usepackage{listings}              % Only used for this template to display code, can delete
-
+\usepackage{chngcntr}               %Change the resetting of counters
 
 %--------------------------------------------------------------------------%
 %                                                                          %
@@ -51,6 +51,9 @@
     urlcolor=blue,           % color of external links
     plainpages=false,       
 }
+
+% Deal with footnote counter i.e. make it a continous count from start to finish of thesis
+\counterwithout{footnote}{chapter}
 
 % This is only used if you want to add code
 \lstdefinestyle{base}{
